@@ -57,7 +57,10 @@ set showmatch
 set sw=2
 set relativenumber
 set encoding=UTF-8
-set guifont=FuraMono\ NF:h10
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set guifont=CaskaydiaCove\ NF:h10
 set laststatus=2
 set noshowmode
 
@@ -83,6 +86,11 @@ nmap <Leader>s <Plug>(easymotion-s2)
 " Comment line(s) with /
 nnoremap <space>/ :Commentary<CR>
 vnoremap <space>/ :Commentary<CR>
+" Resize window
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+" Exit terminal mode with esc
+tnoremap <Esc> <C-\><C-n>
 
 " Document highlighting
 let g:markdown_fenced_languages = [
