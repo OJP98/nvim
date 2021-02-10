@@ -62,12 +62,15 @@ let g:which_key_map.d = {
 
 let g:which_key_map.c = {
   \ 'name': '+coc' ,
-  \ 'd': [':CocList diagnostics'  , 'list diagnostics'],
-  \ 'e': [':CocList extensions'   , 'list extensions'],
-  \ 'c': [':CocList commands'     , 'list commands'],
+  \ 'd': [':CocList diagnostics'          , 'list diagnostics'],
+  \ 'e': [':CocList extensions'           , 'list extensions'],
+  \ 'c': [':CocList commands'             , 'list commands'],
   \ 'a': ['<Plug>(coc-codeaction)'        , 'code action'],
   \ 'f': ['<Plug>(coc-fix-current)'       , 'autofix'],
   \ 'r': ['<Plug>(coc-rename)'            , 'rename'],
+  \ 'R': ['<Plug>(coc-references)'        , 'references'],
+  \ 'p': ['<Plug>(coc-diagnostic-prev)'   , 'prev diagnostic'],
+  \ 'n': ['<Plug>(coc-diagnostic-next)'   , 'next diagnostic'],
   \ }
 
 " g is for git
