@@ -2,6 +2,7 @@ source ~/AppData/Local/nvim/plug-config/coc.vim
 source ~/AppData/Local/nvim/plug-config/start-screen.vim 
 source ~/AppData/Local/nvim/plug-config/far.vim
 source ~/AppData/Local/nvim/plug-config/fzf.vim
+source ~/AppData/Local/nvim/plug-config/which-key.vim
 source ~/AppData/Local/nvim/themes/airline.vim
 
 call plug#begin('~/AppData/Local/nvim/autoload/plugged')
@@ -24,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ryanoasis/vim-devicons'
+Plug 'liuchengxu/vim-which-key'
 
 " NerdTreee
 Plug 'preservim/nerdtree'
@@ -37,6 +39,13 @@ Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim', { 'commit': '23dda8602f138a9d75dd03803a79733ee783e356'}
 Plug 'airblade/vim-rooter'
+
+"Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+Plug 'rhysd/git-messenger.vim'
 
 call plug#end()
 
@@ -63,6 +72,7 @@ set expandtab
 set guifont=CaskaydiaCove\ NF:h10
 set laststatus=2
 set noshowmode
+set colorcolumn=80
 
 " Current theme
 colorscheme gruvbox
@@ -90,7 +100,7 @@ vnoremap <space>/ :Commentary<CR>
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " Exit terminal mode with esc
-tnoremap <Esc> <C-\><C-n>
+tnoremap <C-\> <C-\><C-n>
 
 " Document highlighting
 let g:markdown_fenced_languages = [
