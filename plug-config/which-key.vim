@@ -30,6 +30,7 @@ let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 let g:which_key_map['n'] = [ ':let @/ = ""'               , 'no highlight' ]
 let g:which_key_map['z'] = [ ':FZF'                       , 'FZF' ]
+let g:which_key_map['q'] = [ '<Plug>(coc-fix-current)'    , 'quickfix' ]
 
 " s is for search
 let g:which_key_map.d = {
@@ -101,6 +102,16 @@ let g:which_key_map.g = {
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
+      \ }
+
+" S is for session
+let g:which_key_map.S = {
+      \ 'name' : '+Session' ,
+      \ 'c' : [':SClose'          , 'Close Session']  ,
+      \ 'd' : [':SDelete'         , 'Delete Session'] ,
+      \ 'l' : [':SLoad'           , 'Load Session']     ,
+      \ 's' : [':Startify'        , 'Start Page']     ,
+      \ 'S' : [':SSave'           , 'Save Session']   ,
       \ }
 
 " Register which key map
