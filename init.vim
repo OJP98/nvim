@@ -1,11 +1,14 @@
-source ~/AppData/Local/nvim/plug-config/coc.vim
-source ~/AppData/Local/nvim/plug-config/start-screen.vim 
-source ~/AppData/Local/nvim/plug-config/far.vim
-source ~/AppData/Local/nvim/plug-config/fzf.vim
-source ~/AppData/Local/nvim/plug-config/which-key.vim
-source ~/AppData/Local/nvim/themes/airline.vim
+source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/themes/onedark.vim
+source $HOME/.config/nvim/plug-config/rnvimr.vim
+source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/start-screen.vim 
+source $HOME/.config/nvim/plug-config/far.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/which-key.vim
+source $HOME/.config/nvim/themes/airline.vim
 
-call plug#begin('~/AppData/Local/nvim/autoload/plugged')
+call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Work register
 Plug 'wakatime/vim-wakatime'
@@ -18,7 +21,10 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
+
+" Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ChristianChiarulli/far.vim'
 Plug 'vim-airline/vim-airline'
@@ -26,6 +32,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
+Plug 'joshdick/onedark.vim'
 
 " NerdTreee
 Plug 'preservim/nerdtree'
@@ -37,7 +44,7 @@ Plug 'mhinz/vim-startify'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim', { 'commit': '23dda8602f138a9d75dd03803a79733ee783e356'}
+Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 
 "Git
@@ -69,23 +76,14 @@ set encoding=UTF-8
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set guifont=CaskaydiaCove\ NF:h10
+set guifont=Hack:h10
 set laststatus=2
 set noshowmode
-set colorcolumn=80
+" set colorcolumn=80
 
 " Current theme
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
-" RainbowParentheses
-let g:rainbow#max_level = 16
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-autocmd FileType * RainbowParentheses
-let g:rainbow_conf = {
-      \	'separately': {
-      \		'nerdtree': 0,
-      \	}
-      \}
+colorscheme onedark
+" let g:gruvbox_contrast_dark = "hard"
 
 " Leader key
 let mapleader=" "

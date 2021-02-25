@@ -9,10 +9,7 @@ let g:startify_lists = [
           \ ]
 
 let g:startify_bookmarks = [
-            \ { 'c': '~/Desktop/evolutionpwa/angular-spa' },
-            \ { 'i': '~/AppData/Local/nvim/init.vim' },
-            \ { 'y': '~/AppData/Local/nvim' },
-            \ { 'z': '~/Desktop/evolutionpwa/angular-spa' },
+            \ { 'i':  '~/.config/nvim/session'},
             \ ]
 
 let g:startify_session_autoload = 1

@@ -16,5 +16,24 @@
   "prettier.tabWidth": 2,
   "prettier.tslintIntegration": true,
   "coc.preferences.previewMaxHeight": 10,
-  "git.enableGutters": false
+  "git.enableGutters": false,
+
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    }
+  }
 }
