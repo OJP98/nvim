@@ -14,13 +14,25 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'wakatime/vim-wakatime'
 
 " themes
-Plug 'morhetz/gruvbox'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'norcalli/nvim-colorizer.lua'
+" Colorschemes
+Plug 'morhetz/gruvbox'
+Plug 'crusoexia/vim-dracula'
+Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " IDE
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-commentary'
+
+" Syntax highlighting
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
@@ -32,7 +44,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
-Plug 'joshdick/onedark.vim'
+
 
 " NerdTreee
 Plug 'preservim/nerdtree'
@@ -41,6 +53,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Startify
 Plug 'mhinz/vim-startify'
+
+" Codi
+Plug 'metakirby5/codi.vim'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -56,6 +71,8 @@ Plug 'rhysd/git-messenger.vim'
 
 call plug#end()
 
+lua require'colorizer'.setup()
+
 " Settings for nerdtree
 map <C-m> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = ''
@@ -65,7 +82,7 @@ let g:NERDTreeDirArrowCollapsible = ''
 set number
 set mouse=a
 set numberwidth=1
-set clipboard=unnamed
+set clipboard=unnamedplus
 syntax enable
 set showcmd
 set ruler
@@ -82,6 +99,7 @@ set noshowmode
 " set colorcolumn=80
 
 " Current theme
+" colorscheme dracula
 colorscheme onedark
 " let g:gruvbox_contrast_dark = "hard"
 
